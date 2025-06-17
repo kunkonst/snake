@@ -1,6 +1,5 @@
 from tkinter import *
 from random import *
-from copy import deepcopy
 
 
 class SimpleSnake:
