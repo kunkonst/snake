@@ -81,11 +81,8 @@ class SimpleSnake:
                 self.canvas.create_rectangle(self.snake2[i][0] * 20, self.snake2[i][1] * 20, (self.snake2[i][0] + 1) * 20, (self.snake2[i][1] + 1) * 20, fill = "Red")
             for i in range(len(self.snake)):
                 self.canvas.create_rectangle(self.snake[i][0] * 20, self.snake[i][1] * 20, (self.snake[i][0] + 1) * 20, (self.snake[i][1] + 1) * 20, fill = "Red")
-            self.canvas.create_text(200, 200, text="Обоюдный проигрыш\nНажмите любую клавишу", fill="white", font=("Arial", 18), justify="center")
-            self.root.unbind("<Key>")
-            self.root.bind("<Key>", lambda e: self.root.quit())
-            #self.root.mainloop()
-            return
+            input("Нажмите Enter для выхода")
+            self.root.quit()
 
         for i in range(1, len(self.snake)):
             if self.snake2[0][0] == self.snake[i][0] and self.snake2[0][1] == self.snake[i][1]:
